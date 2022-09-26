@@ -1,0 +1,4 @@
+#80 uvflag src
+pol
+channel,324,700,1,1
+channel,150,1,1,1

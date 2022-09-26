@@ -1,0 +1,11 @@
+#95 Uvflag src
+pol
+an(2)(7),polarization(YY)
+an(9)(12)
+an(2)(4)
+an(1)(4)
+an(4)(7)
+an(7)(9)
+an(8)
+uvrange(0,1)
+an(7)(12)

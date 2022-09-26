@@ -1,0 +1,8 @@
+#212 uvflag src
+nul
+time(15FEB05:06:20:00,15FEB05:07:40:00)
+an(13)(14)
+an(11)(12)
+an(13)
+an(14)
+uvrange(0,2)

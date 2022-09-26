@@ -1,0 +1,3 @@
+#27 uvflag cal
+pol
+an(11),polarization(YY)

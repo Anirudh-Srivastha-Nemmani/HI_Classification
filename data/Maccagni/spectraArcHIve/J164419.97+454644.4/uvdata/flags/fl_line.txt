@@ -1,0 +1,4 @@
+#2 uvflag cal
+nul
+channel,40,580,1,1
+channel,30,290,1,1

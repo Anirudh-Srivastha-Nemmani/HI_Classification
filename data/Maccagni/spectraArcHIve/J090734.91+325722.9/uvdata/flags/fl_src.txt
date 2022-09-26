@@ -1,0 +1,13 @@
+#43 uvflag src
+pol
+an(2)(14)
+an(4)(14)
+an(7)(14)
+an(9)(14)
+an(12)(14)
+an(13)(14)
+an(2)(13),polarization(yy)
+an(4)(13),polarization(yy)
+an(7)(13),polarization(yy)
+an(9)(13),polarization(yy)
+an(12)(13),polarization(yy)

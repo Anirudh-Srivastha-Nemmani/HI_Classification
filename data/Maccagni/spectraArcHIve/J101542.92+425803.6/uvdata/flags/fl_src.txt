@@ -1,0 +1,4 @@
+#60 uvflag src
+pol
+time(14NOV17:01:44:00,14NOV17:02:15:00)
+uvrange(0,1)

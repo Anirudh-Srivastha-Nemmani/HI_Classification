@@ -1,0 +1,9 @@
+#190 uvflag line
+nul
+uvrange(0,1.5)
+an(4)(7)
+an(7)(11)
+an(4)(13)
+an(7)(3)
+an(9)(13)
+an(12)(13)

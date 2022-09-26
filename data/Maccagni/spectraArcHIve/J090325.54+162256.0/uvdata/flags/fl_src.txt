@@ -1,0 +1,9 @@
+#41 uvflag src
+pol
+an(1)(9),polarization(XX)
+an(2)(9),polarization(XX)
+uvrange(0,1)
+an(2)(4)
+an(7)(9)
+an(4)(7)
+an(1)

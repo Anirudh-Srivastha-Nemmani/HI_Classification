@@ -1,0 +1,7 @@
+#80 uvflag cal
+pol
+an(11)
+uvrange(0,1)
+uvrange(0,1)
+an(1)(2)
+an(3)

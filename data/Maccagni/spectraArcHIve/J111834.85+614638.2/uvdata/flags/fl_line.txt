@@ -1,0 +1,3 @@
+#77 Uvflag src
+nul
+channel,120,1,1,1

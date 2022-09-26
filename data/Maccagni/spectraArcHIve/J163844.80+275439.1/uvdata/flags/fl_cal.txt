@@ -1,0 +1,4 @@
+#182 uvflag cal
+pol
+an(9),polarization(YY)
+uvrange(0,2)

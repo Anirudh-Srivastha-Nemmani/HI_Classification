@@ -1,0 +1,5 @@
+#110 uvflag src
+nul
+channel,100,650,1,1
+channel,10,215,1,1
+channel,10,333,1,1

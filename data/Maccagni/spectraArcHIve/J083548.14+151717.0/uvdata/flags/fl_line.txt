@@ -1,0 +1,3 @@
+#34 uvflag src
+pol
+channel,274,800,1,1

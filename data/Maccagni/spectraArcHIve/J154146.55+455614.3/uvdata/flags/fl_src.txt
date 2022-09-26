@@ -1,0 +1,7 @@
+#183 uvflag src
+nul
+uvrange(0,2)
+time(14DEC20:07:50:00,14DEC20:08:17:00)
+an(13),polarization(YY)
+an(14)
+an(7)(12)

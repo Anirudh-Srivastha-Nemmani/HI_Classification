@@ -1,0 +1,4 @@
+#73 uvflag
+pol
+time(14AUG09:10:50:00,14AUG09:11:20:00)
+uvrange(0,1)

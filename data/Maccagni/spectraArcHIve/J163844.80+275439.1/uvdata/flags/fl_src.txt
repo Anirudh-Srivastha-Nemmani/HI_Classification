@@ -1,0 +1,7 @@
+#182 uvflag cal
+pol
+an(9),polarization(YY)
+uvrange(0,2)
+time(14DEC26:10:15:00,14DEC26:10:40:00)
+time(14DEC26:12:00:00,14DEC26:12:40:00)
+time(14DEC26:09:40:00,14DEC26:09:55:00)

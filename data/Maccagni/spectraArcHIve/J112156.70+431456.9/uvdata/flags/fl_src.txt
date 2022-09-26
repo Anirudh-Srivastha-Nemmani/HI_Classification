@@ -1,0 +1,7 @@
+#80 uvflag src
+pol
+an(11)
+uvrange(0,1)
+uvrange(0,1)
+an(1)(2)
+an(3)

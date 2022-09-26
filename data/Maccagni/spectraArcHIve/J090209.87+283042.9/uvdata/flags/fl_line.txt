@@ -1,0 +1,4 @@
+#40 uvflag src
+nul
+channel,40,1,1,1
+channel,20,570,1,1

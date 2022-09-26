@@ -1,0 +1,4 @@
+#31 uvflag src
+pol
+an(14)
+an(13),polarization(YY)

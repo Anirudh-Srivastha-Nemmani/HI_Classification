@@ -1,0 +1,7 @@
+#136 uvflag cal
+pol
+uvrange(0,2)
+an(11)
+an(1)(4)	
+an(4)(7)
+an(13),polarization(YY)
