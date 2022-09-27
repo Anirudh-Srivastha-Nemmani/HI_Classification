@@ -1,0 +1,14 @@
+spectra_reversed/SPEC_J0041S.DAT
+spectra_reversed/SPEC_J0849_2.DAT
+spectra_reversed/SPEC_J0921+6215.DAT
+spectra_reversed/SPEC_J1241.DAT
+spectra_reversed/SPEC_J1243.DAT
+spectra_reversed/SPEC_J1255+1817.DAT
+spectra_reversed/SPEC_J1327+4326.DAT
+spectra_reversed/SPEC_J1342+5110.DAT
+spectra_reversed/SPEC_J1428.DAT
+spectra_reversed/SPEC_J1438d.DAT
+spectra_reversed/SPEC_J1443.DAT
+spectra_reversed/SPEC_J1551.DAT
+spectra_reversed/SPEC_J1639.DAT
+spectra_reversed/SPEC_J2219+0229.DAT
