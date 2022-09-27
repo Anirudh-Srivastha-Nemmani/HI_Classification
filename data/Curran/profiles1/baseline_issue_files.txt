@@ -1,0 +1,4 @@
+spectra_reversed/J17081524+2111175_mmo+17.dat
+spectra_reversed/J1945+7055_ptc99.jpg.dat
+spectra_reversed/J2219+0229_dsg+17.jpg.dat
+spectra_reversed/J224500-343030_asd+19.dat
