@@ -1,0 +1,26 @@
+# This is the local BusyFit history file in which all fit results are stored.
+# In order to delete the history, e.g. prior to a batch run of BusyFit on a
+# large number of spectra, simply delete the file; it will be recreated 
+# during the next launch of the software. Alternatively, you may choose to 
+# remove individual entries from the file. The results of new fits will be 
+# appended at the end of the file.
+#
+# The parameters in the respective columns (separated by tabs) are:
+#
+# Filename	Success	Nchan	dof	chi^2	chi^2/dof	rms	A	dA	B_1	dB_1	B_2	dB_2	C	dC	XE_0	dXE_0	XP_0	dXP_0	W	dW	N	dN	X	dX	W_50	dW_50	W_20	dW_20	F_peak	dF_peak	F_int	dF_int
+#
+J17081524+2111175_mmo+17.dat	0	29	24	360.048	15.002	0.01	0.138501	0.0552972	0.544572	0.504722	0.422985	0.374133	0	0	13.139	0.477467	0.1	0	2.9859	1.09407	0	0	13.8287	5.12889	217.932	13.1529	304.365	13.4638	0.13246	0.00708106	29.3919	1.25394
+J17081524+2111175_mmo+17.dat	0	29	24	360.048	15.002	0.01	0.138501	0.0552972	0.544572	0.504722	0.422985	0.374133	0	0	13.139	0.477467	0.1	0	2.9859	1.09407	0	0	13.8287	5.12889	217.932	13.1529	304.365	13.4638	0.13246	0.00708106	29.3919	1.25394
+J17081524+2111175_mmo+17.dat	0	29	24	360.048	15.002	0.01	0.138501	0.0552972	0.544572	0.504722	0.422985	0.374133	0	0	13.139	0.477467	0.1	0	2.9859	1.09407	0	0	13.8287	5.12889	217.932	13.1529	304.365	13.4638	0.13246	0.00708106	29.3919	1.25394
+J17081524+2111175_mmo+17.dat	0	29	24	360.048	15.002	0.01	0.138501	0.0552972	0.544572	0.504722	0.422985	0.374133	0	0	13.139	0.477467	0.1	0	2.9859	1.09407	0	0	13.8287	5.12889	217.932	13.1529	304.365	13.4638	0.13246	0.00708106	29.3919	1.25394
+J17081524+2111175_mmo+17.dat	0	29	24	360.048	15.002	0.01	0.138501	0.0552972	0.544572	0.504722	0.422985	0.374133	0	0	13.139	0.477467	0.1	0	2.9859	1.09407	0	0	13.8287	5.12889	217.932	13.1529	304.365	13.4638	0.13246	0.00708106	29.3919	1.25394
+J1945+7055_ptc99.jpg.dat	2	22	14	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	1.28842	0	0	0	0	0	0	0	0	0
+J1945+7055_ptc99.jpg.dat	2	22	14	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	1.28842	0	0	0	0	0	0	0	0	0
+J1945+7055_ptc99.jpg.dat	2	22	14	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	1.28842	0	0	0	0	0	0	0	0	0
+J1945+7055_ptc99.jpg.dat	2	22	14	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	1.28842	0	0	0	0	0	0	0	0	0
+J1945+7055_ptc99.jpg.dat	2	22	14	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	1.28842	0	0	0	0	0	0	0	0	0
+J2219+0229_dsg+17.jpg.dat	2	33	25	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	-87.61	0	0	0	0	0	0	0	0	0
+J2219+0229_dsg+17.jpg.dat	2	33	25	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	-87.61	0	0	0	0	0	0	0	0	0
+J2219+0229_dsg+17.jpg.dat	2	33	25	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	-87.61	0	0	0	0	0	0	0	0	0
+J2219+0229_dsg+17.jpg.dat	2	33	25	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	-87.61	0	0	0	0	0	0	0	0	0
+J2219+0229_dsg+17.jpg.dat	2	33	25	nan	nan	0.01	0	-nan	0.5	-nan	0.5	-nan	0.01	-nan	-nan	-nan	-nan	-nan	-nan	-nan	2	-nan	-87.61	0	0	0	0	0	0	0	0	0
