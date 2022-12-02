@@ -13,7 +13,7 @@
 \usepackage[T1]{fontenc}
 
 %% Sets page size and margins
-\usepackage[a4paper,top=1.55cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage[a4paper,top=1.30cm,bottom=1.95cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 
 %% Useful packages
 \usepackage{amsmath}
@@ -73,6 +73,9 @@ After finding duplicates and removing the non-usable (Low Resolution) data, we o
 
 As we can notice, there is a class imbalance in our dataset. Due to this reason, we have contacted Dr Kanekar for more data on intervening spectra and have yet to receive the data.
 
+
+It should also be noted that the redshift distribution of known associated 21cm absorbers is $z < 1$, a majority in $z < 0.25$ \cite{13}. At the same time, the intervening spectra have $z > 1$(conversation with Dr Kanekar). To make a statistical comparison, we assume no redshift evolution, which may not be true as the line properties such as velocity width and optical depth are likely to evolve intrinsically with redshift. At this point, we can only assume no redshift evolution and wait for more HI 21cm absorbers to be detected through blind surveys.
+
 \section{Analysis}
 \subsection{Busy Function Fitting} \label{sec3.1}
 In this project we use the busy function to fit the HI absorption spectra\cite{8}. The busy function is given by the expression,
@@ -87,7 +90,7 @@ It has a maximum of 8 free parameters. To fit the spectra, we use BusyFit, writt
 
 After using the busy fitting, we could fit a total of 103 spectra, losing fitting for 21 spectra due to poor resolution. Out of 21, 3 were from Intervening and 18 are from Associated spectra.
 
-All the spectra that could not fit were given in my project GitHub repository, the link provided in the footnotes.\footnote{The link to my GitHub Repository is \href{https://github.com/Anirudh-Srivastha-Nemmani/HI_Classification.git}{Click Here}. Note that this repository contains all my codes and bash scripts I have written to do all my analysis, and I will frequently push my edits throughout the project.}
+The busy function fitting parameters for each spectra were saved in my GitHub repository in the directory named "Final", the link for the repository is provided in the footnotes.\footnote{The link to my GitHub Repository is \href{https://github.com/Anirudh-Srivastha-Nemmani/HI_Classification.git}{Click Here}. Note that this repository contains all my codes and bash scripts I have written to do all my analysis, and I will frequently push my edits throughout the project.}
 
 \subsection{Machine Learning Algorithm} \label{sec3.2}
 
@@ -103,13 +106,15 @@ After prepping the data, I used this data to train the data and tuning hyper-par
 
 In the case of Neural Networks, it has been noticed that the model I have created was not learning, resulting in very low test accuracy. Even using SMOTE on minority class did not help the neural network learn as the dataset was small enough to train a good model. The same scenario is noticed in the case of a Convolution Neural Network.
 
+Due to the stochastic nature of labeling the classes in GMM algorithm, GMM algorithm is not used in this project.
+
 Please refer to my GitHub repository in the footnotes to access my machine-learning codes.\footnotemark[1]
 
 \section{Results}
-I have achieved the following Average Accuracy, AUC ROC and Average Precision for these machine learning models 
+I have achieved the following Average Accuracy, AUC ROC and Average Precision for these machine learning models. I have used Zero Rule Model as a baseline to check my other machine learning algorithms, Zero Rule model predicts every sample into a single class, in this case it's the most frequent class.
 
 \begin{itemize}
-    \item  \textbf{Zero Rule Model} - Baseline Model (Predicts the same class (Majority class))
+    \item  \textbf{Zero Rule Model} - Baseline Model (Predicts the same class (Most frequent class))
 	\begin{itemize}
 	\item{ROC AUC - 0.5}
 	\item{Average Accuracy - 78.7\%}
