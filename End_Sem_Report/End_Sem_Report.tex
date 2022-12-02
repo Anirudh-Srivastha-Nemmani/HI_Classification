@@ -1,0 +1,163 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+%% Welcome to Overleaf!
+%% If this is your first time using LaTeX, it might be worth going through this brief presentation:
+%% https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1
+
+%% Researchers have been using LaTeX for decades to typeset their papers, producing beautiful, crisp documents in the process. By learning LaTeX, you are effectively following in their footsteps, and learning a highly valuable skill!
+
+%% The \usepackage commands below can be thought of as analogous to importing libraries into Python, for instance. We've pre-formatted this for you, so you can skip right ahead to the title below.
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=1.55cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{booktabs}
+
+%\frenchspacing
+
+%% Title
+\title{
+		%\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{Semester Project Report (End-Sem) 2022} \\ [10pt]
+		\huge Classification of HI absorption spectra using ML \\
+}
+
+\usepackage{authblk}
+
+\author{Nemmani Anirudh Srivastha}
+
+	\affil{\small{20191108 \\ Indian Institute of Science Education and Research Tirupati}}
+
+	\affil{Under the supervision of Dr Arunima Banerjee}
+
+\begin{document}
+\maketitle
+
+\selectlanguage{english}
+\begin{abstract}
+HI - 21cm line in absorption spectra of continuum radio source can be observed when a gas medium associated or intervening in the line of sight of the source galaxy and the observer is present. The classification is usually done by looking at the optical spectrum of the source. Instead, we used Machine Learning to classify the spectra using line properties obtained from Busy Function fitting. We used Random Forest, KNN, Decision Tree, SVM and Logistic Regression models to train the dataset. We also used our dataset to try to train Neural Network and Convolution Neural Networks and discussed their difficulties. In this work, We obtained the highest accuracy and precision in classifying the spectra using the Random Forest model.
+\end{abstract} \\ 
+\\ 
+{\textbf{Keywords} \\
+HI Absorption spectra, Busy Function, Machine Learning}
+
+\section{Introduction}
+Neutral Hydrogen is an important raw material for star formation. We probe its 21cm spectral line due to spin-flip transition to study HI. Radio waves can penetrate through dust clouds and reach the observer, which is why 21cm gives a better picture of Hydrogen in the galaxy or universe.
+
+HI emission continuum can be used to understand the distribution of ISM in the galaxies\cite{1}. We can study galaxies' evolution and kinematics, and it helps precisely measure cosmological constants\cite{2}.
+
+It is noticed that the HI line in absorption due to a gas medium in the line of sight of the bright radio continuum is very effective in studying ISM properties at a much higher redshift compared to emission lines\cite{3}.
+
+HI absorption spectra are classified into two groups, Associated and Intervening. If the absorbing gas medium is associated with the source galaxy, the absorption spectra due to the gas medium are called Associated spectra. Similarly, if the absorbing medium is intervening in the source's galaxy line of sight, the absorption spectra are called Intervening spectra. We can study ISM properties in our galaxy and other galaxies using Intervening absorption spectra, which are more reachable than emission spectra\cite{4}. In the case of Associated spectra, we can observe the relation between the gas and the radio source as they are associated with the same galaxy\cite{3}.
+
+It is challenging to classify the HI absorption spectrum without an optical spectrum into associated or intervening, as the spectrum itself has a redshift but cannot be distinguished if it is from associated or intervening gas. In some cases, an absorption spectrum was not classified until an optical spectrum had been obtained\cite{5}.
+
+Due to fast rotating gas around AGNs, the associated absorption spectra have a broader width \cite{6} compared to a narrow width profile of intervening spectra \cite{7}. Using these properties, we can classify the spectra using machine learning. We derive the line properties of the spectrum using the busy function\cite{8}. These line properties are used to train the ML models like Random Forest, KNN, SVM, Decision Tree and Logistic regression. Neural Networks and convolution neural networks are also trained in this project, but the model failed to learn due to the data sample, which will be discussed in later sections.
+
+
+\section{Data Collection}
+
+I received spectra from Dr Curran\cite{9}, Dr Rajeshwari Dutta\cite{10, 11, 12} and Dr Maccagni\cite{13}. After obtaining the spectra, I conducted a literature survey to find duplicates and ensure the data were in the same axis and units before fitting it. The data from Dr Maccagni lies in the redshift between $0.02$ and $0.25$, and data from Dr Curran lies in the redshift range $z > 0.01$. 
+
+After finding duplicates and removing the non-usable (Low Resolution) data, we obtained 99 Associated and 25 Intervening spectra. The data we obtained from Dr Curran is digitized data from articles. Due to this, some spectra were in low resolution, which resulted in no use for machine learning. So we excluded those spectra with no improvement in quality after another run of digitization.
+
+As we can notice, there is a class imbalance in our dataset. Due to this reason, we have contacted Dr Kanekar for more data on intervening spectra and have yet to receive the data.
+
+\section{Analysis}
+\subsection{Busy Function Fitting} \label{sec3.1}
+In this project we use the busy function to fit the HI absorption spectra\cite{8}. The busy function is given by the expression,
+\begin{equation} \label{eq1}
+\begin{aligned}
+    B_1(x) = \frac{a}{4}&\times\left( \text{erf}[b_1\{w + x - x_e\}] + 1\right)\\
+    & \times \left( \text{erf}[b_2\{w - x + x_e\}] + 1\right) \\ 
+    & \times \left( c|x - x_p|^n + 1 \right)
+\end{aligned}
+\end{equation}
+It has a maximum of 8 free parameters. To fit the spectra, we use BusyFit, written by Dr Tobias Westmeier\cite{8}. One of the disadvantages of the busy function is that it only outputs positive values, evident from Eq.\eqref{eq1}. After discussing with Dr Westmeier, it is noted that we can reverse the spectra for fitting it using the busy function under the assumption that it has a baseline centred on zero, which is the case for absorption spectra.
+
+After using the busy fitting, we could fit a total of 103 spectra, losing fitting for 21 spectra due to poor resolution. Out of 21, 3 were from Intervening and 18 are from Associated spectra.
+
+All the spectra that could not fit were given in my project GitHub repository, the link provided in the footnotes.\footnote{The link to my GitHub Repository is \href{https://github.com/Anirudh-Srivastha-Nemmani/HI_Classification.git}{Click Here}. Note that this repository contains all my codes and bash scripts I have written to do all my analysis, and I will frequently push my edits throughout the project.}
+
+\subsection{Machine Learning Algorithm} \label{sec3.2}
+
+We have used Random Forest, Decision Tree, KNN, SVM, Logistic Regression, Neural Network and Convolution Neural Network to classify the spectra using the line features obtained from fitting the spectra.
+
+The features selected for the classification are the eight free parameters of busy function, along with centroid, $w_{50}$, $w_{20}$, peak flux, and integrated flux. We chose 13 features to classify the spectra.
+
+The dataset is divided into ten subsets by randomly mixing the entire data and splitting them into training and test data. (i.e. ten-fold cross-validation). For necessary models, I have normalized the data inside the folds, so there will not be any information leakage to the test data set.
+
+As we noticed in the previous section, there was a significant class imbalance in the dataset. To improve this major class imbalance, I have used SMOTE to over-sample the minority class so that the class imbalance will not affect the model.
+
+After prepping the data, I used this data to train the data and tuning hyper-parameters for the machine learning model to improve the accuracy. The results section will discuss the obtained accuracy of each machine learning.
+
+In the case of Neural Networks, it has been noticed that the model I have created was not learning, resulting in very low test accuracy. Even using SMOTE on minority class did not help the neural network learn as the dataset was small enough to train a good model. The same scenario is noticed in the case of a Convolution Neural Network.
+
+Please refer to my GitHub repository in the footnotes to access my machine-learning codes.\footnotemark[1]
+
+\section{Results}
+I have achieved the following Average Accuracy, AUC ROC and Average Precision for these machine learning models 
+
+\begin{itemize}
+    \item  \textbf{Zero Rule Model} - Baseline Model (Predicts the same class (Majority class))
+	\begin{itemize}
+	\item{ROC AUC - 0.5}
+	\item{Average Accuracy - 78.7\%}
+	\item{Average Precision - 21.3\%}
+	\end{itemize}
+    \item  \textbf{Random Forest}
+	\begin{itemize}
+	\item{ROC AUC - 0.969}
+	\item{Average Accuracy - 92.6\%}
+	\item{Average Precision - 89.4\%}
+	\end{itemize}
+    \item  \textbf{KNN} 
+	\begin{itemize}
+	\item{ROC AUC - 0.919}
+	\item{Average Accuracy - 86.3\%}
+	\item{Average Precision - 79\%}
+	\end{itemize}
+    \item  \textbf{Decision Tree} 
+	\begin{itemize}
+	\item{ROC AUC - 0.912}
+	\item{Average Accuracy - 93.2\%}
+	\item{Average Precision - 79.3\%}
+	\end{itemize}
+    \item  \textbf{Logistic Regression} 
+	\begin{itemize}
+	\item{ROC AUC - 0.916}
+	\item{Average Accuracy - 85.4\%}
+	\item{Average Precision - 80\%}
+	\end{itemize}
+    \item  \textbf{SVM} 
+	\begin{itemize}
+	\item{ROC AUC - 0.9}
+	\item{Average Accuracy - 83.8\%}
+	\item{Average Precision - 75.3\%}
+	\end{itemize}
+\end{itemize}
+
+The above results may vary a little ( < 1\%) due to the stochastic nature of oversampling.
+
+\section{Conclusion and Future Plans}
+
+We were able to train five different machine learning models and achieved the highest accuracy, precision and ROC AUC for Random Forest. All the machine learning models produced an average accuracy of above 80\%. This shows that machine learning can classify the spectra as associated or intervening. These accuracies and precision can be improved with more data, reducing class imbalance and giving more features for the machine learning model. As mentioned in the Data Collection section, we have contacted Dr Kanekar to obtain more data for this project, which will reduce the class imbalance ratio and may help us achieve a higher accuracy level due to higher spectra resolution. We also aim to improve our Neural Networks by collecting more data in future.
+
+\section{Acknowledgements}
+
+I thank Dr Arunima and Dr Rajeshwari for clearing my doubts and providing me with data and guidance for this project. I also like to acknowledge Dr Maccagni and Dr Curran for providing me with data and Dr Tobias Westmeier for providing the BusyFit software and helping me with technical issues regarding the software to do this project effectively, and Adarsh Mahor from NIT Surat for his suggestions in improving Neural Network Model.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

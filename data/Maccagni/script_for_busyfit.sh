@@ -7,8 +7,8 @@ while read i
 do
 	if [ "$i" == "$exception" ]
 	then
-		~/Downloads/Programs/BusyFit-0.3.2/busyfit -c 1 2 -n rms -1 -noplot "$i"
+		~/Downloads/Programs/BusyFit-0.3.2/busyfit -c 1 2 "$i"
 	else
-		~/Downloads/Programs/BusyFit-0.3.2/busyfit -c 1 3 -n rms 4 -noplot "$i"
+		~/Downloads/Programs/BusyFit-0.3.2/busyfit -c 1 3 "$i"
 	fi
 done < "$filename"
