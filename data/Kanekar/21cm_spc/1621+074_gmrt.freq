@@ -1,0 +1,90 @@
+#
+# Final GMRT HI 21cm spectrum from the z=1.3357 MgII system towards J1623+0718 on 8/5/2008
+# This is an archival dataset from 14RSa01.
+#
+# Total observed time was 6.2h on source.
+#
+# 5 antennas were entirely flagged: (3,6,10,13,28).
+#
+# Bandwidth : 1.0 MHz, 128 channels. Channel 1 at 607.67 MHz.
+#
+# 3C48 and 3C286 were used for flux calibration and 1640+123 for phase and 
+# bandpass calibration; its flux density was measured to be 
+# 1640+123: 2.88635 +/- 0.01585 Jy.
+# Bandpass calibration was applied with DOBAND=3.
+#
+# The UV data of J1623+0718 were imaged using 3-D techniques.  The map has an RMS 
+# noise of ~ 0.33 mJy/Bm and a beam of ~ 8.43'' X 6.01'', with position angle=67.49 
+# degrees. This was made using Robust=1 weighting, averaging 40 channels together. 
+# The data were self-calibrated in both phase and amplitude after applying normal 
+# gain calibration. The entire primary beam was imaged, out to a radius of 0.5
+# degrees, using 19 facets.
+#
+# The integrated intensity of J1623+0718 was measured to be 132.54 +/- 0.62 mJy,
+# from JMFIT and the peak flux was measured to be 134.07 +/- 0.36 mJY/BEAM
+# consistent with a point source.  
+#
+# The spectrum was obtained using the AIPS task CVEL, after SPLIT'ing, UVSUB'ing
+# and UVLIN'ing the data. UVLIN was used with ICHANSEL 20 40 1 0 70 90 1 0
+# Natural weighting was used. I also ran a CLIP on the UVLIN file, clipping 
+# at 6.5 Jy.
+#
+# CVEL was used with APARM 0 65 1 0 608.e+6 136316.34605916075472 0 1 0, to centre the 
+# velocity scale at z = 1.33567 and _not_ carry out Hanning-smoothing.  The non-FFT
+# version of CVEL was used for this.
+#
+# Column 2 contains heliocentric velocity in km/s relative to z = 1.33567, Column
+# 3, heliocentric frequency, in MHz, and Column 4, the Hanning smoothed and resampled 
+# spectrum, in Jy.
+#
+# The smoothed and re-sampled spectrum has an RMS noise of 0.75 mJy. Theoretical noise, 
+# assuming T_sys ~ 100 K and gain ~ 0.32 K/Jy, is 0.69 mJy per smoothed channel, 
+# for 25 antennas, so we're well within a factor of sqrt(2). Fairly reasonable, 
+# especially given the amount of flagging.
+# 
+# Clear absorption, although the weaker component looks a little weaker than in
+# the spectrum of Gupta et al. Interesting.
+#
+7    200.2537520    607.7303679     -0.0012802 
+8    192.5516850    607.7459712      0.0000286 
+9    184.8496170    607.7615754      0.0009096 
+10    177.1475500    607.7771804     -0.0000471 
+11    169.4454820    607.7927862      0.0003837 
+12    161.7434150    607.8083928     -0.0003059 
+13    154.0413480    607.8240002     -0.0009087 
+14    146.3392800    607.8396083      0.0000713 
+15    138.6372130    607.8552173      0.0015306 
+16    130.9351460    607.8708271     -0.0004928 
+17    123.2330780    607.8864377      0.0015811 
+18    115.5310110    607.9020491     -0.0007266 
+19    107.8289430    607.9176613     -0.0009096 
+20    100.1268760    607.9332743     -0.0001509 
+21     92.4248086    607.9488881      0.0006181 
+22     84.7227412    607.9645027     -0.0001133 
+23     77.0206738    607.9801181     -0.0003896 
+24     69.3186064    607.9957343      0.0003589 
+25     61.6165391    608.0113513     -0.0003804 
+26     53.9144717    608.0269691      0.0003236 
+27     46.2124043    608.0425878      0.0008586 
+28     38.5103369    608.0582072      0.0005042 
+29     30.8082695    608.0738274     -0.0020364 
+30     23.1062021    608.0894484     -0.0022016 
+31     15.4041348    608.1050702     -0.0012955 
+32      7.7020674    608.1206929     -0.0038350 
+33      0.0000000    608.1363163     -0.0057625 
+34     -7.7020674    608.1519405     -0.0022670 
+35    -15.4041348    608.1675656     -0.0001889 
+36    -23.1062021    608.1831914     -0.0007992 
+37    -30.8082695    608.1988180      0.0003582 
+38    -38.5103369    608.2144455     -0.0003202 
+39    -46.2124043    608.2300737      0.0005710 
+40    -53.9144717    608.2457028     -0.0013830 
+41    -61.6165391    608.2613326      0.0004212 
+42    -69.3186064    608.2769633     -0.0010092 
+43    -77.0206738    608.2925948      0.0002353 
+44    -84.7227412    608.3082270      0.0001972 
+45    -92.4248086    608.3238601     -0.0005049 
+46   -100.1268760    608.3394940      0.0017558 
+47   -107.8289430    608.3551286     -0.0004765 
+48   -115.5310110    608.3707641      0.0009004 
+49   -123.2330780    608.3864004     -0.0000383 
