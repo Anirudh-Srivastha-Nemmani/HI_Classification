@@ -1,0 +1,13 @@
+Name (File Name),Fixed Nomenclature,Absorber Redshift,QSO Redshift,Background Source Flux Density (Jy),Reference,Frequency/Velocity,Velocity with respect to?
+0003+380_ak18.DAT,,0.229,,0.5473,Aditya 2018b,Velocity,Absorber
+0035+22_omd+17.DAT,,0.096,,0.583,Ostorero+2017,Velocity,
+0941-08_omd+17.DAT,,0.2281,,2.58,Ostorero+2017,Velocity,
+101301.DAT,,0.94959,,0.8919,Aditya 2019,Velocity,
+1045+35A_adi.DAT,,0.84644,,0.5529,Aditya 2019,Velocity,
+1142+052_kpec09.DAT,,1.3431,1.345,1.01,Kanekar+2009,Frequency,
+1200+045_ak17.DAT,,1.226,,1.6752,Aditya 2018a,Velocity,
+1245-197_ak17.DAT,,1.275,,8.3022,Aditya 2018a,Velocity,
+J01465-0157_adi19.DAT,,0.95904,,1.8038,Aditya+2019,Velocity,
+SPEC_J0919+0146.DAT,J091927.61+014603.0,1.27308,1.286,0.183,Dutta+2017b,Frequency ,
+SPEC_J1521+5508.DAT,J152134.15+550857.2,1.07009,1.07,0.195,Dutta+2019,Frequency,
+1504+377_cmr+98.DAT,,0.67331,,1,Carilli+1998,Velocity,
